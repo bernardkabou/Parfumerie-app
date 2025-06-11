@@ -77,7 +77,7 @@ parfumerie-app/
 ![Page d'inscription](./src/assets/Inscription.png)
 
 ### Profil
-![Page de profil](./src/assets/screenshots/Profil.png)
+![Page de profil](./src/assets/Profil.png)
 
 
 
