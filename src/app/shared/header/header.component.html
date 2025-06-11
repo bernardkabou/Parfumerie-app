@@ -1,0 +1,58 @@
+<header>
+  <div class="header-container">
+    <!-- Section gauche avec logo et navigation -->
+    <div class="left-section">
+      <div class="logo">
+        <a routerLink="/" class="logo-link">
+          <span class="logo-text">BK</span>
+        </a>
+      </div>
+      <nav class="nav-links">
+        <a routerLink="/" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Accueil</a>
+        <a routerLink="/hommes" class="nav-link" routerLinkActive="active">Hommes</a>
+        <a routerLink="/femmes" class="nav-link" routerLinkActive="active">Femmes</a>
+      </nav>
+    </div>
+
+    <!-- Section centrale avec barre de recherche -->
+    <div class="search-section">
+      <div class="search-bar">
+        <input type="text" placeholder="Rechercher un parfum...">
+        <button type="button">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Section droite avec authentification et panier -->
+    <div class="right-section">
+      <ng-container *ngIf="!isAuthenticated">
+        <a routerLink="/login" class="auth-link">
+          <i class="fas fa-user"></i>
+          <span>Se connecter</span>
+        </a>
+        <a routerLink="/register" class="auth-link">
+          <i class="fas fa-user-plus"></i>
+          <span>S'inscrire</span>
+        </a>
+      </ng-container>
+      <ng-container *ngIf="isAuthenticated">
+        <a routerLink="/profile" class="auth-link">
+          <i class="fas fa-user"></i>
+          <span>{{ userName || 'Mon profil' }}</span>
+        </a>
+        <button (click)="logout()" class="auth-link logout-btn">
+          <i class="fas fa-sign-out-alt"></i>
+          <span>Se déconnecter</span>
+        </button>
+      </ng-container>
+      <a routerLink="/panier" class="auth-link cart-link">
+        <div class="cart-icon-container">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-badge" *ngIf="itemCount > 0">{{ itemCount }}</span>
+        </div>
+        <span>Panier</span>
+      </a>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,24 @@
+<section class="hero">
+  <div class="hero-content">
+    <h1>Nos parfums femmes</h1>
+    <p>Des fragrances délicates et envoûtantes, conçues pour sublimer la féminité dans toute sa splendeur.</p>
+  </div>
+</section>
+
+<div class="products-container">
+  <h2>Parfums pour Femme</h2>
+  <div class="products-grid">
+    <div *ngFor="let product of products" class="product-card">
+      <img [src]="product.image" [alt]="product.name" class="product-image">
+      <div class="product-info">
+        <h3>{{product.name}}</h3>
+        <p class="description">{{product.description}}</p>
+        <p class="price">{{product.price | currency:'EUR'}}</p>
+        <button class="add-to-cart" (click)="addToCart(product)">
+          Ajouter au panier
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+

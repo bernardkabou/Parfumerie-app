@@ -1,0 +1,87 @@
+<section class="hero">
+  <div class="hero-content">
+    <h1>Bienvenue chez BK Parfumerie</h1>
+    <p>Découvrez notre collection exclusive de parfums</p>
+  </div>
+</section>
+
+<section class="carousel">
+  <div class="carousel-container">
+    <div class="carousel-content">
+      <img [src]="currentImage" alt="Parfum" class="carousel-image">
+      <div class="carousel-navigation">
+        <button class="carousel-button prev" (click)="prevSlide()">&lt;</button>
+        <button class="carousel-button next" (click)="nextSlide()">&gt;</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="featured-products">
+  <!-- Section Nouveautés -->
+  <div class="product-section">
+    <h2>NOUVEAUTÉS</h2>
+    <div class="product-grid">
+      <div *ngFor="let product of newProducts" class="product-card">
+        <img [src]="product.image" [alt]="product.name">
+        <h3>{{product.name}}</h3>
+        <p>{{product.description}}</p>
+        <p class="price">{{product.price | currency:'EUR'}}</p>
+        <button class="cta-button" (click)="addToCart(product)">Ajouter au panier</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section Les Tendances -->
+  <div class="product-section">
+    <h2>LES TENDANCES</h2>
+    <div class="product-grid">
+      <div *ngFor="let product of trendingProducts" class="product-card">
+        <img [src]="product.image" [alt]="product.name">
+        <h3>{{product.name}}</h3>
+        <p>{{product.description}}</p>
+        <p class="price">{{product.price | currency:'EUR'}}</p>
+        <button class="cta-button" (click)="addToCart(product)">Ajouter au panier</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section Meilleures Ventes -->
+  <div class="product-section">
+    <h2>MEILLEURES VENTES DE PARFUMS</h2>
+    <div class="product-grid">
+      <div *ngFor="let product of bestSellers" class="product-card">
+        <img [src]="product.image" [alt]="product.name">
+        <h3>{{product.name}}</h3>
+        <p>{{product.description}}</p>
+        <p class="price">{{product.price | currency:'EUR'}}</p>
+        <button class="cta-button" (click)="addToCart(product)">Ajouter au panier</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about-section">
+  <h2>À PROPOS</h2>
+  <div class="about-content">
+    <div class="about-text">
+      <h3>BK Parfumerie</h3>
+      <p>Bienvenue dans l'univers raffiné de BK Parfumerie, votre destination de choix pour les fragrances d'exception. Notre passion pour la parfumerie nous pousse à sélectionner les créations les plus prestigieuses et les plus innovantes.</p>
+      <p>Fondée avec l'ambition de rendre accessible l'excellence de la parfumerie, BK Parfumerie vous propose une collection soigneusement curatée de parfums pour hommes et femmes.</p>
+      <div class="about-features">
+        <div class="feature">
+          <h4>Expertise</h4>
+          <p>Une sélection experte des meilleures fragrances</p>
+        </div>
+        <div class="feature">
+          <h4>Qualité</h4>
+          <p>Des produits authentiques et certifiés</p>
+        </div>
+        <div class="feature">
+          <h4>Service</h4>
+          <p>Un conseil personnalisé pour votre satisfaction</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
