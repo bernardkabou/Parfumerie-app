@@ -60,20 +60,24 @@ parfumerie-app/
 ## 📸 Captures d'écran
 
 ### Page d'accueil
-![Page d'accueil](/src/assets/screenshots/accueil.png)
+![Page d'accueil](./src/assets/Accueil1.png)
+![Page d'accueil](./src/assets/Accueil2.png)
 
 ### Catalogue Hommes
-![Catalogue Hommes](/src/assets/screenshots/hommes.png)
+![Catalogue Hommes](./src/assets/Hommes.png)
 
 ### Catalogue Femmes
-![Catalogue Femmes](/src/assets/screenshots/femmes.png)
+![Catalogue Femmes](./src/assets/Femmes.png)
 
 ### Panier
-![Panier](/src/assets/screenshots/panier.png)
+![Panier](./src/assets/Panier.png)
 
 ### Authentification
-![Page de connexion](/src/assets/screenshots/login.png)
-![Page d'inscription](/src/assets/screenshots/register.png)
+![Page de connexion](./src/assets/Connexion.png)
+![Page d'inscription](./src/assets/Inscription.png)
+
+### Profil
+![Page de profil](./src/assets/screenshots/Profil.png)
 
 
 
